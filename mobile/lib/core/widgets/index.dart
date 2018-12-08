@@ -1,0 +1,1 @@
+export './BottomBar/bottom_bar.dart';
