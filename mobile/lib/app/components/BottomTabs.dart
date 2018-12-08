@@ -10,7 +10,7 @@ class BottomTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Messages messages;
+    Messages messages = new Messages();
     return Align(
       alignment: Alignment.bottomCenter,
       child: BottomBar(

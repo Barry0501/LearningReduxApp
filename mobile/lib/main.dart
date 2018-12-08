@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:mobile/app/ui/main_page.dart';
 import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:key_value_store_flutter/key_value_store_flutter.dart';
@@ -42,9 +43,7 @@ class _InKinoAppState extends State<InKinoApp> {
           accentColor: const Color(0xFFFFAD32),
           scaffoldBackgroundColor: Colors.transparent,
         ),
-        home: Container(
-          child: Text('Hello'),
-        ),
+        home: MainPage(),
       ),
     );
   }
