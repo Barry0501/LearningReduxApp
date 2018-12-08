@@ -28,7 +28,7 @@ class _InKinoAppState extends State<InKinoApp> {
   @override
   void initState() {
     super.initState();
-    //widget.store.dispatch(InitAction());
+    widget.store.dispatch(InitAction());
   }
 
   @override
