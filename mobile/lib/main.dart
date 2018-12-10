@@ -6,7 +6,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:key_value_store_flutter/key_value_store_flutter.dart';
 import 'package:http/http.dart';
 import 'package:core/core.dart';
-import 'package:core/src/models/app_state.dart';
 
 
 Future<void> main() async {

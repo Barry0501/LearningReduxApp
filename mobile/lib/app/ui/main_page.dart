@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/app/components/BottomTabs.dart';
+import 'package:mobile/app/components/app_bar.dart';
 import 'package:mobile/app/data/images.dart';
 
 class MainPage extends StatefulWidget {
@@ -65,8 +66,9 @@ class _MainPageState extends State<MainPage>
     );
 
     final content = Scaffold(
-      appBar: AppBar(
-        title: Text('Test'),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight),
+        child: AppBarCustom(),
       ),
       body: Stack(
         children: <Widget>[
