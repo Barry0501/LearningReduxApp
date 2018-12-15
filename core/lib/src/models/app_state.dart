@@ -1,14 +1,21 @@
 // Khởi tạo dữ liệu mẫu cho AppState
+import 'package:core/src/redux/show/show_state.dart';
+import 'package:core/src/redux/theater/theater_state.dart';
 import 'package:meta/meta.dart';
 
 class AppState {
-  final bool isLoading;
+  final ShowState showState;
+  final TheaterState theaterState;
 
-  AppState({@required this.isLoading });
+  AppState({
+    @required this.showState, // showTimes 
+    @required this.theaterState, // showTimes 
+  });
 
   factory AppState.initial(){
     return AppState(
-      isLoading: false,
+      showState: ShowState.initial(),
+      theaterState: TheaterState.initial()
     );
   }
 
@@ -16,7 +23,8 @@ class AppState {
     bool isLoading
   }){
     return AppState(
-      isLoading: isLoading ?? this.isLoading
+      showState: showState ?? this.showState,
+      theaterState: theaterState ?? this.theaterState
     );
   }
 
@@ -25,9 +33,10 @@ class AppState {
       identical(this, other) || 
       other is AppState &&
         runtimeType == other.runtimeType &&
-        isLoading == other.isLoading;
+        theaterState == other.theaterState &&
+        showState == other.showState;
 
   @override
   int get hashCode =>
-    isLoading.hashCode;
+    showState.hashCode ^ theaterState.hashCode;
 }
