@@ -24,7 +24,7 @@ class ShowState {
 
   ShowState copyWith({
     LoadingStatus loadingStatus,
-    List<DateTime> dates,
+    List<DateTime> availableDates,
     DateTime selectedDate,
     Map<DateTheaterPair, List<Show>> shows,
   }) {
